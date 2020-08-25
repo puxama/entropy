@@ -1,2 +1,7 @@
 # entropy
-Allows you calculate entropy and information gain
+Allows you calculate entropy and information gain.
+
+Requirements
+
+- Pandas
+- Matplotlib

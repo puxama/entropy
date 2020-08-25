@@ -15,4 +15,4 @@ if __name__ == '__main__':
 
     en.plot_information_gain(df_train[['Sex', 'Embarked', 'Pclass', 'Survived']], 'Survived', 2)
 
-    en.plot_categorical_entropy(df_train['Sex'], df_train['Survived'], 2)
+    en.plot_categorical_entropy(df_train['Embarked'], df_train['Survived'], 2)

@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import math
 
 import matplotlib.pyplot as plt
@@ -213,8 +214,11 @@ def plot_categorical_entropy(categorical_var, population, base=math.e, name_cate
     Returns: No return
 
     """
-
-    category_entropy_list = _get_categorical_entropy(categorical_var, population, base)
+    df_dataset = pd.concat([categorical_var, population], axis=1)
+    df_dataset = df_dataset.loc[~df_dataset.iloc[:, 0].isnull()]
+    category_entropy_list = _get_categorical_entropy(df_dataset.iloc[:, 0],
+                                                     df_dataset.iloc[:, 1],
+                                                     base)
 
     plt.rcParams["figure.figsize"] = [10, 6]
 

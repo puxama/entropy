@@ -14,5 +14,9 @@ if __name__ == '__main__':
         print(var)
 
     en.plot_information_gain(df_train[['Sex', 'Embarked', 'Pclass', 'Survived']], 'Survived', 2)
-
+    print("Categorical Entropy")
     en.plot_categorical_entropy(df_train['Embarked'], df_train['Survived'], 2)
+
+    df_dataset = pd.concat([df_train['Embarked'], df_train['Survived']], axis=1)
+
+    print(df_dataset.head())

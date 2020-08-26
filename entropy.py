@@ -246,8 +246,6 @@ def plot_categorical_entropy(categorical_var, population, base=math.e, name_cate
     plt.title('Entropy and prevalence of values: ' + name_categorical_var, fontsize=20)
     plt.xlabel('Proportion', fontsize=20)
     plt.ylabel('Entropy', fontsize=20)
-
-    fig.subplots_adjust(top=1.3)
     plt.show()
 
 

@@ -1,4 +1,5 @@
 import unittest
+
 import entropy
 
 
@@ -23,7 +24,7 @@ class TestEntropy(unittest.TestCase):
 
     def test_get_information_gain(self):
         information_gain = entropy._get_information_gain(self.categorical_var,
-                                                        self.labels, 2)
+                                                         self.labels, 2)
         self.assertEqual(information_gain, 0.23)
 
 
